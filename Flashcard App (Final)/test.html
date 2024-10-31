@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Quiz</title>
+    <link rel="stylesheet" href="bruh.css">
+</head>
+<body>
+    <div class="container">
+        <a href="settings.html" id="settingsButton" class="settings-btn">
+            <img src="https://img.icons8.com/material-rounded/24/000000/settings.png" alt="Settings">
+        </a>
+
+        <h2>Create Flashcards</h2>
+        <form id="flashcardForm">
+            <label for="word">Word:</label><br>
+            <input type="text" id="word" required><br><br>
+
+            <label for="meaning">Meaning:</label><br>
+            <input type="text" id="meaning" required><br><br>
+
+            <button type="submit">Add Flashcard</button>
+        </form>
+
+        <!-- Buttons to access flashcard list and start quiz -->
+        <button id="flashcardListButton">Flashcard List</button>
+        <button id="startQuizButton">Start Quiz</button>
+    </div>
+
+    <script>
+        const flashcardForm = document.getElementById('flashcardForm');
+        const flashcards = JSON.parse(localStorage.getItem('flashcards')) || [];
+
+        flashcardForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const word = document.getElementById('word').value;
+            const meaning = document.getElementById('meaning').value;
+
+            flashcards.push({ word, meaning });
+            localStorage.setItem('flashcards', JSON.stringify(flashcards));
+            alert('Flashcard added!');
+            flashcardForm.reset();
+        });
+
+        document.getElementById('flashcardListButton').addEventListener('click', () => {
+            window.location.href = 'flashcardlist.html';
+        });
+
+        // Redirect to quiz page when "Start Quiz" button is clicked
+        document.getElementById('startQuizButton').addEventListener('click', () => {
+            // Check if there are enough flashcards to start the quiz
+            if (flashcards.length < 4) {
+                alert("Please add at least 4 flashcards to start the quiz.");
+            } else {
+                window.location.href = 'quiz.html'; // Go to quiz page
+            }
+        });
+    </script>
+
+    <script src="bruh.js"></script>
+</body>
+</html>

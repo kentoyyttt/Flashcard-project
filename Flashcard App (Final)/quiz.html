@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="bruh.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Flashcard Quiz</h2>
+
+        <!-- Quiz Section -->
+        <div id="quizSection">
+            <p id="question">Question will appear here...</p>
+            <ul id="choices"></ul>
+            <p id="quizMessage"></p>
+            <button id="backToFlashcards">Back to Flashcards</button>
+        </div>
+    </div>
+
+    <script src="bruh.js"></script> <!-- Link to your JS file -->
+    
+    <script>
+        // Ensure the quiz section is displayed when this page loads
+        document.addEventListener("DOMContentLoaded", function() {
+            // Show quizSection on page load
+            document.getElementById("quizSection").style.display = "block";
+
+            // Initialize the quiz
+            if (typeof generateQuiz === 'function') {
+                generateQuiz();
+            } else {
+                console.error("generateQuiz function is not defined in bruh.js");
+            }
+
+            // Event listener to go back to flashcards
+            const backButton = document.getElementById("backToFlashcards");
+            backButton.addEventListener("click", function() {
+                window.location.href = "test.html"; // Adjust path to your main page
+            });
+        });
+    </script>
+</body>
+</html>

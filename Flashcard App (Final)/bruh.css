@@ -1,0 +1,162 @@
+/* General Page Styling */
+body {
+
+    justify-content: center; /* center vertically */
+    font-family: 'Times New Roman', cursive, serif;
+    background-color: #0a87f5;
+    margin: 12;
+    padding: 12;
+    display: flex;
+    min-height: 100vh;
+    background: url('https://www.transparenttextures.com/patterns/skulls.png');
+
+}   
+  /* Style for the settings button */
+  .settings-btn  
+.relative-container {
+    position: relative; /* establish positioning context */
+    height: 200px; /* adjust as needed */
+}
+
+.absolute-icon {
+    position: absolute;
+    top: 20px; /* adjust position */
+    left: 30px; /* adjust position */
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+}
+
+.sidebar input[type="range"] {
+    width: 100%;
+}
+
+.sidebar #fontSizeValue {
+    margin-left: 10px;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 270px; /* Offset for sidebar */
+    width: calc(100% - 270px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    background-color: #fcfbf8;
+    padding: 30px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    border: 5px solid #efd3aa;
+    font-size: var(--font-size); /* Dynamic font size */
+}
+
+h2, h3 {
+    color: #e99b1e;
+    font-size: 28px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #ff9800;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #f9f7f7;
+    text-align: center;
+}
+
+button {
+    background-color: #574602;
+    color: rgb(245, 245, 245);
+    padding: 10px 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #b68601;
+    transform: scale(1.1);
+}
+
+ul {
+    list-style: none;
+    padding-left: 1;
+}
+
+li {
+    background-color: #ff5722;
+    color: #bbaaaa;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+/* Quiz Section */
+#quizSection {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #574602;
+    border-radius: 25px;
+}
+
+#question {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#choices {
+    text-align: center; /* Center-aligns the list container */
+    padding: 12px; /* Optional: Remove default padding */
+}
+
+#choices li {
+    display: inline-; /* Allows list items to be centered within the container */
+    background-color: #c3ab4a;
+    color: #fff;
+    padding: 12px;
+    margin: 5px; /* Adjust margin to create spacing between items */
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#choices li.correct {
+    background-color: #4CAF50; /* Green for correct */
+}
+
+#choices li.wrong {
+    background-color: #f71303; /* Red for wrong */
+}
+
+#quizMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+#backToFlashcards {
+    margin-top: 20px;
+}

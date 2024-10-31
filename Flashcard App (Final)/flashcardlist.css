@@ -1,0 +1,76 @@
+/* General Page Styling */
+body {
+
+    justify-content: center; /* center vertically */
+    font-family: 'Times New Roman', cursive, sans-serif;
+    background-color: #f0f8ff;
+    margin: 12;
+    padding: 12;
+    display: flex;
+    min-height: 100vh;
+    background: url('https://www.transparenttextures.com/patterns/skulls.png');
+}
+/* Main Content Styling */
+.main-content {
+    margin-left: 270px; /* Offset for sidebar */
+    width: calc(100% - 270px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container {
+    background-color: #fcfbf8;
+    padding: 30px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    border: 5px solid #efd3aa;
+    font-size: var(--font-size); /* Dynamic font size */
+}
+
+h2, h3 {
+    color: #dba753;
+    font-size: 28px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #574602;
+    color: #ccc0ae;
+    padding: 10px 12px;
+    display: flex;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #b68601;
+    transform: scale(1.1);
+}
+
+ul {
+    list-style: none;
+    padding-left: 1;
+}
+
+li {
+    background-color: #746515;
+    color: #fffefe;
+    margin: 22px 0;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 22px;
+}
